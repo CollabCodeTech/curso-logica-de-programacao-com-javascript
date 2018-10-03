@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+
+
+
+<script>
+  // NaN = not a number (não é um número)
+
+  let sapatoValor = 2;
+  let onibusValor = 4;
+  let taxiValor = 14.4;
+  let taxiValorReal = transformaMoedaReal(taxiValor);
+  let total = somaTotalMeiosDeTransporte();
+  let media = calculaMediaMeiosDeTransporte();
+
+  function transformaMoedaReal(valorEmFloat) {
+    return 'R$ ' + valorEmFloat.toFixed(2).replace('.', ',');
+  }
+
+  function transformaParaFloat(valorEmMoeda) {
+    return parseFloat(valorEmMoeda.replace(',', '.').replace('R$ ', ''));
+  }
+
+  function somaTotalMeiosDeTransporte() {
+    let total = sapatoValor + onibusValor + taxiValor;
+
+    return transformaMoedaReal(total);
+  }
+
+  function calculaMediaMeiosDeTransporte() {
+    let totalFloat = transformaParaFloat(total);
+    let media = totalFloat / 3;
+
+    return transformaMoedaReal(media);
+  }
+
+  function imprimeResumoNaTela() {
+    document.write('<p>Sapato - R$ ' + sapatoValor + ',00</p>');
+    document.write('<p>Ônibus - R$ ' + onibusValor + ',00</p>');
+    document.write('<p>99Taxi - ' + taxiValorReal + '</p>');
+
+    document.write('<p>Total - ' + total + '</p>');
+    document.write('<p>Média - ' + media + '</p>');
+  }
+
+  document.write('<h1>Meio com o menor preço para ir no Parque Ibirapuera saindo do MASP</h1>');
+
+  imprimeResumoNaTela();
+</script>
