@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+
+<script>
+  let numeroCerto = 12;
+  let chute = '';
+  let acertou = false;
+
+  for (let qtdTentativas = 0; qtdTentativas < 5; qtdTentativas++) {
+    if (acertou === false) {
+      chute = prompt('Qual é a sua acertação?');
+
+      if (chute === 'passo' || chute === null) {
+        continue;
+      }
+
+      document.write('<strong>Você chutou: </strong>' + chute);
+      document.write('<br>')
+      if (chute == numeroCerto) {
+        document.write('Você acertou! O número é exatamente ' + numeroCerto);
+        acertou = true
+      }
+    }
+  }
+
+  // while (qtdTentativas < 5 && acertou === false) {
+  //   chute = prompt('Qual é a sua acertação?');
+
+  //   if (chute === 'passo' || chute === null) {
+  //     qtdTentativas++;
+  //     continue;
+  //   }
+
+  //   document.write('<strong>Você chutou: </strong>' + chute);
+  //   document.write('<br>')
+  //   if (chute == numeroCerto) {
+  //     document.write('Você acertou! O número é exatamente ' + numeroCerto);
+  //     acertou = true
+  //   }
+
+  //   // qtdTentativas = qtdTentativas + 1;
+  //   qtdTentativas++;
+  // }
+</script>

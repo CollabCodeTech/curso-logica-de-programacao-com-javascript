@@ -14,3 +14,9 @@ Entender e estudar sozinho o que é?
 
 - if ternário
 - XOR
+
+## 04 Aula
+
+- Estudar o for in
+- Numero que chutou ~(jutou)~ é maior ou menor
+- Dois jogadores na mesma máquina
