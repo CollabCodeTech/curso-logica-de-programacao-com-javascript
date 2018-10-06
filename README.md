@@ -24,3 +24,4 @@ Entender e estudar sozinho o que é?
 ## 05 Aula
 
 - Delete
+- Mensagem pra confirmação do delete
