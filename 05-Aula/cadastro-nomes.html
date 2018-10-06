@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+
+<button onClick="cadastraNome()">Cadastrar nome</button>
+<button onClick="atualizarNome()">Atualiza nome</button>
+<div id="palco"></div>
+
+<script>
+  let palco = document.getElementById('palco');
+  let nomes = [];
+
+  function render() {
+    palco.innerHTML = '<strong>Tamanho da nossa lista de nomes:</strong> ' + nomes.length;
+    palco.innerHTML += '<br>';
+
+    nomes.forEach(function (nome, index) {
+      palco.innerHTML += '<strong>' + index + '</strong> ' + nome;
+      palco.innerHTML += '<br>';
+    });
+  }
+
+  function cadastraNome(event) {
+    let novoNome = prompt('Qual o nome da pessoa?');
+    nomes.push(novoNome);
+
+    render();
+  }
+
+  function atualizarNome() {
+    let posicao = prompt('Qual é a posição que você quer atualizar?');
+    let nomeAtualizado = prompt('Qual o novo valor do nome?');
+
+    nomes[posicao] = nomeAtualizado;
+
+    render();
+  }
+</script>

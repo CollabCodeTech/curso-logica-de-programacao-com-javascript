@@ -18,5 +18,9 @@ Entender e estudar sozinho o que é?
 ## 04 Aula
 
 - Estudar o for in
-- Numero que chutou ~(jutou)~ é maior ou menor
+- Numero que chutou ~~(jutou)~~ é maior ou menor
 - Dois jogadores na mesma máquina
+
+## 05 Aula
+
+- Delete
